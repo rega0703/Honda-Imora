@@ -6,10 +6,18 @@
   <title>Honda Imora - Promo & Pemesanan</title>
   <style>
     body { font-family: Arial, sans-serif; margin:0; padding:0; }
-    header { background:#e60000; color:#fff; text-align:center; padding:20px; }
+    header { background:#e60000; color:#fff; padding:10px 20px; display:flex; align-items:center; justify-content:space-between; }
+    header img { height:50px; }
+    nav ul { list-style:none; margin:0; padding:0; display:flex; }
+    nav ul li { margin:0 15px; }
+    nav ul li a { color:#fff; text-decoration:none; font-weight:bold; }
+    nav ul li a:hover { text-decoration:underline; }
     section { padding:20px; }
     footer { background:#000; color:#fff; text-align:center; padding:15px; }
-    img { max-width:300px; margin:10px; }
+    .car-card { display:inline-block; margin:15px; text-align:center; border:1px solid #ddd; padding:10px; border-radius:8px; background:#f9f9f9; }
+    .car-card img { max-width:250px; }
+    .car-card h3 { margin:10px 0 5px; }
+    .car-card p { margin:0; font-weight:bold; color:#e60000; }
     form input, form select { width: 100%; padding:8px; margin:5px 0; }
     form button { background:#25d366; color:#fff; border:none; padding:10px; cursor:pointer; font-size:16px; }
     form button:hover { background:#1ebe5d; }
@@ -34,19 +42,40 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-  <!-- Header -->
+  <!-- Header dengan logo dan menu -->
   <header>
-    <h1>Honda Imora 🚗</h1>
-    <p>Promo & Pemesanan Mobil Honda Terbaru</p>
+    <img src="https://ik.imagekit.io/wamr3naeq/HONDA%20IMORA/Desain%20tanpa%20judul%20-%202025-11-16T143713.209-fotor-bg-remover-20251116143828.png" alt="Logo Honda Imora">
+    <nav>
+      <ul>
+        <li><a href="#showroom">Showroom</a></li>
+        <li><a href="#usedcar">Used Car</a></li>
+        <li><a href="#service">Service</a></li>
+        <li><a href="#care">Customer Care</a></li>
+        <li><a href="#social">Social Media</a></li>
+        <li><a href="#models">Car Model</a></li>
+      </ul>
+    </nav>
   </header>
 
   <!-- Section Promo -->
   <section id="promo">
     <h2>Promo Spesial</h2>
     <p>Dapatkan penawaran terbaik untuk Honda Brio, HR-V, dan CR-V!</p>
-    <img src="https://ik.imagekit.io/wamr3naeq/HONDA%20IMORA/orange.png" alt="Honda Brio">
-    <img src="https://ik.imagekit.io/wamr3naeq/HONDA%20IMORA/hr-v.png" alt="Honda HR-V">
-    <img src="https://ik.imagekit.io/wamr3naeq/HONDA%20IMORA/cr-v.png" alt="Honda CR-V">
+    <div class="car-card">
+      <img src="https://ik.imagekit.io/wamr3naeq/HONDA%20IMORA/orange.png" alt="Honda Brio">
+      <h3>Honda Brio</h3>
+      <p>Mulai dari Rp 165.000.000</p>
+    </div>
+    <div class="car-card">
+      <img src="https://ik.imagekit.io/wamr3naeq/HONDA%20IMORA/hr-v.png" alt="Honda HR-V">
+      <h3>Honda HR-V</h3>
+      <p>Mulai dari Rp 375.000.000</p>
+    </div>
+    <div class="car-card">
+      <img src="https://ik.imagekit.io/wamr3naeq/HONDA%20IMORA/cr-v.png" alt="Honda CR-V">
+      <h3>Honda CR-V</h3>
+      <p>Mulai dari Rp 550.000.000</p>
+    </div>
   </section>
 
   <!-- Form Pemesanan -->
