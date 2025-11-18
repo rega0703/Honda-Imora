@@ -1,52 +1,6 @@
-<!DOCTYPE html>
-<html lang="id">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Honda Imora - Promo & Pemesanan</title>
-  <link rel="stylesheet" href="style.css">
-  <!-- Font Awesome untuk ikon WhatsApp -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-</head>
-<body>
-  <!-- Header dengan logo dan menu -->
-  <header>
-    <img src="https://ik.imagekit.io/wamr3naeq/HONDA%20IMORA/Desain%20tanpa%20judul%20-%202025-11-16T143713.209-fotor-bg-remover-20251116143828.png" alt="Logo Honda Imora">
-    <nav>
-      <ul>
-        <li><a href="#showroom">Showroom</a></li>
-        <li><a href="#usedcar">Used Car</a></li>
-        <li><a href="#service">Service</a></li>
-        <li><a href="#care">Customer Care</a></li>
-        <li><a href="#social">Social Media</a></li>
-        <li><a href="#models">Car Model</a></li>
-      </ul>
-    </nav>
-  </header>
-
-  <!-- Section Promo -->
-  <section id="promo">
-    <h2>Promo Spesial</h2>
-    <p>Dapatkan penawaran terbaik untuk Honda Brio, HR-V, dan CR-V!</p>
-    <div class="car-card">
-      <img src="https://ik.imagekit.io/wamr3naeq/HONDA%20IMORA/orange.png" alt="Honda Brio">
-      <h3>Honda Brio</h3>
-      <p>Mulai dari Rp 165.000.000</p>
-    </div>
-    <div class="car-card">
-      <img src="https://ik.imagekit.io/wamr3naeq/HONDA%20IMORA/hr-v.png" alt="Honda HR-V">
-      <h3>Honda HR-V</h3>
-      <p>Mulai dari Rp 375.000.000</p>
-    </div>
-    <div class="car-card">
-      <img src="https://ik.imagekit.io/wamr3naeq/HONDA%20IMORA/cr-v.png" alt="Honda CR-V">
-      <h3>Honda CR-V</h3>
-      <p>Mulai dari Rp 550.000.000</p>
-    </div>
-  </section>
-
-  <!-- Form Pemesanan -->
-  <section id="order">
+<!-- Form Pemesanan -->
+<section id="order">
+  <div class="form-wrapper">
     <h2>Pemesanan Mobil</h2>
     <form id="waForm">
       <label>Nama:</label><br>
@@ -64,38 +18,5 @@
 
       <button type="submit">Pesan Sekarang via WhatsApp</button>
     </form>
-  </section>
-
-  <!-- Footer -->
-  <footer>
-    <p>Honda Imora - Showroom Resmi Honda</p>
-    <p>Atas Nama: Ardiansyah</p>
-    <p>Alamat: Jl. MH. Thamrin No. 21 & 23, Sentul City, Babakan Madang, Kabupaten Bogor, Jawa Barat</p>
-    <p>Telepon: 0811 1925 187</p>
-  </footer>
-
-  <!-- WhatsApp Bubble -->
-  <a href="https://wa.me/628111925187" class="whatsapp-float" target="_blank">
-    <i class="fab fa-whatsapp"></i>
-  </a>
-
-  <!-- Script untuk WhatsApp API -->
-  <script>
-    document.getElementById("waForm").addEventListener("submit", function(e){
-      e.preventDefault();
-      var nama = document.getElementById("nama").value;
-      var hp = document.getElementById("hp").value;
-      var model = document.getElementById("model").value;
-
-      var pesan = "Halo Honda Imora, saya ingin memesan mobil.\n\n" +
-                  "Nama: " + nama + "\n" +
-                  "No. HP: " + hp + "\n" +
-                  "Model: " + model + "\n\n" +
-                  "Terima kasih.";
-
-      var url = "https://wa.me/628111925187?text=" + encodeURIComponent(pesan);
-      window.open(url, "_blank");
-    });
-  </script>
-</body>
-</html>
+  </div>
+</section>
