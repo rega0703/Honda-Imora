@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Honda Imora - Promo & Pemesanan</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin:0; padding:0; }
+    header { background:#e60000; color:#fff; text-align:center; padding:20px; }
+    section { padding:20px; }
+    footer { background:#000; color:#fff; text-align:center; padding:15px; }
+    img { max-width:300px; margin:10px; }
+    form input, form select { width: 100%; padding:8px; margin:5px 0; }
+    form button { background:#25d366; color:#fff; border:none; padding:10px; cursor:pointer; font-size:16px; }
+    form button:hover { background:#1ebe5d; }
+    /* WhatsApp bubble */
+    .whatsapp-float {
+      position: fixed;
+      width: 60px;
+      height: 60px;
+      bottom: 20px;
+      right: 20px;
+      background-color: #25d366;
+      color: #fff;
+      border-radius: 50px;
+      text-align: center;
+      font-size: 30px;
+      box-shadow: 2px 2px 3px #999;
+      z-index: 100;
+    }
+    .whatsapp-float i { margin-top: 16px; }
+  </style>
+  <!-- Font Awesome untuk ikon WhatsApp -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <h1>Honda Imora 🚗</h1>
+    <p>Promo & Pemesanan Mobil Honda Terbaru</p>
+  </header>
+
+  <!-- Section Promo -->
+  <section id="promo">
+    <h2>Promo Spesial</h2>
+    <p>Dapatkan penawaran terbaik untuk Honda Brio, HR-V, dan CR-V!</p>
+    <img src="https://ik.imagekit.io/wamr3naeq/HONDA%20IMORA/orange.png" alt="Honda Brio">
+    <img src="https://ik.imagekit.io/wamr3naeq/HONDA%20IMORA/hr-v.png" alt="Honda HR-V">
+    <img src="https://ik.imagekit.io/wamr3naeq/HONDA%20IMORA/cr-v.png" alt="Honda CR-V">
+  </section>
+
+  <!-- Form Pemesanan -->
+  <section id="order">
+    <h2>Pemesanan Mobil</h2>
+    <form id="waForm">
+      <label>Nama:</label><br>
+      <input type="text" id="nama" required><br>
+
+      <label>No. HP:</label><br>
+      <input type="text" id="hp" required><br>
+
+      <label>Pilih Model Honda:</label><br>
+      <select id="model">
+        <option>Honda Brio</option>
+        <option>Honda HR-V</option>
+        <option>Honda CR-V</option>
+      </select><br><br>
+
+      <button type="submit">Pesan Sekarang via WhatsApp</button>
+    </form>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>Honda Imora - Showroom Resmi Honda</p>
+    <p>Atas Nama: Ardiansyah</p>
+    <p>Alamat: Jl. MH. Thamrin No. 21 & 23, Sentul City, Babakan Madang, Kabupaten Bogor, Jawa Barat</p>
+    <p>Telepon: 0811 1925 187</p>
+  </footer>
+
+  <!-- WhatsApp Bubble -->
+  <a href="https://wa.me/628111925187" class="whatsapp-float" target="_blank">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+
+  <!-- Script untuk WhatsApp API -->
+  <script>
+    document.getElementById("waForm").addEventListener("submit", function(e){
+      e.preventDefault();
+      var nama = document.getElementById("nama").value;
+      var hp = document.getElementById("hp").value;
+      var model = document.getElementById("model").value;
+
+      var pesan = "Halo Honda Imora, saya ingin memesan mobil.\n\n" +
+                  "Nama: " + nama + "\n" +
+                  "No. HP: " + hp + "\n" +
+                  "Model: " + model + "\n\n" +
+                  "Terima kasih.";
+
+      var url = "https://wa.me/628111925187?text=" + encodeURIComponent(pesan);
+      window.open(url, "_blank");
+    });
+  </script>
+</body>
+</html>
