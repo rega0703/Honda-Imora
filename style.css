@@ -57,6 +57,11 @@ footer {
   padding:10px;
   border-radius:8px;
   background:#f9f9f9;
+  transition: transform 0.3s ease;
+}
+
+.car-card:hover {
+  transform: scale(1.05);
 }
 
 .car-card img {
@@ -73,25 +78,26 @@ footer {
   color:#e60000;
 }
 
-/* Form Pemesanan lebih kecil dan center */
 #order {
-  display:flex;
-  justify-content:center;
-  align-items:center;
-  margin:40px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 40px 0;
 }
 
-#order form {
-  width:300px;
-  border:1px solid #ddd;
-  padding:20px;
-  border-radius:8px;
-  background:#f9f9f9;
-  box-shadow:0 2px 5px rgba(0,0,0,0.1);
+.form-wrapper {
+  width: 320px;
+  background: #f9f9f9;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  text-align: center;
 }
 
-#order h2 {
-  text-align:center;
+.form-wrapper h2 {
+  margin-bottom: 15px;
+  font-size: 20px;
+  color: #e60000;
 }
 
 form input, form select {
@@ -114,7 +120,6 @@ form button:hover {
   background:#1ebe5d;
 }
 
-/* WhatsApp bubble */
 .whatsapp-float {
   position: fixed;
   width: 60px;
