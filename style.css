@@ -2,8 +2,11 @@ body {
   font-family: Arial, sans-serif;
   margin:0;
   padding:0;
+  background: linear-gradient(to bottom right, #e60000, #000000);
+  min-height: 100vh;
 }
 
+/* Header */
 header {
   background:#e60000;
   color:#fff;
@@ -38,7 +41,9 @@ nav ul li a:hover {
   text-decoration:underline;
 }
 
+/* Slider */
 .slider {
+  position: relative;
   width: 100%;
   overflow: hidden;
   margin-top: 20px;
@@ -62,18 +67,155 @@ nav ul li a:hover {
   100% { transform: translateX(0%); }
 }
 
-section {
-  padding:20px;
+/* Overlay transparan & teks slider */
+.slider-overlay {
+  position: absolute;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  background: rgba(0,0,0,0.4);
+  z-index: 1;
 }
 
+.slider-text {
+  position: absolute;
+  top:50%;
+  left:50%;
+  transform: translate(-50%, -50%);
+  text-align:center;
+  color:#fff;
+  z-index: 2;
+}
+
+.slider-text h1 {
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+
+.slider-text p {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.cta-btn {
+  background:#e60000;
+  color:#fff;
+  padding:12px 20px;
+  border-radius:6px;
+  text-decoration:none;
+  font-weight:bold;
+  transition: background 0.3s ease;
+}
+
+.cta-btn:hover {
+  background:#b80000;
+}
+
+/* General section styling */
+section {
+  padding: 40px 20px;
+}
+
+/* Judul section */
+section h2 {
+  text-align: center;
+  font-size: 26px;
+  margin-bottom: 20px;
+  color: #e60000;
+  font-weight: bold;
+}
+
+/* Card untuk mobil promo */
+.car-card {
+  display:inline-block;
+  margin:15px;
+  text-align:center;
+  border:1px solid #ddd;
+  padding:20px;
+  border-radius:12px;
+  background:#fff;
+  box-shadow:0 4px 10px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.car-card:hover {
+  transform: translateY(-5px);
+  box-shadow:0 8px 16px rgba(0,0,0,0.2);
+}
+
+.car-card img {
+  max-width:250px;
+  border-radius:8px;
+}
+
+.car-card h3 {
+  margin:15px 0 5px;
+  font-size:20px;
+  color:#333;
+}
+
+.car-card p {
+  margin:0;
+  font-weight:bold;
+  color:#e60000;
+  font-size:18px;
+}
+
+/* Box elegan untuk form (Simulasi & Pemesanan) */
+.form-wrapper {
+  width: 360px;
+  background: #fff;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  text-align: center;
+  margin: auto;
+}
+
+.form-wrapper h2 {
+  margin-bottom: 20px;
+  font-size: 22px;
+  color: #e60000;
+  font-weight: bold;
+}
+
+form input, form select {
+  width: 100%;
+  padding:10px;
+  margin:8px 0;
+  border:1px solid #ccc;
+  border-radius:6px;
+}
+
+form button {
+  background:#e60000;
+  color:#fff;
+  border:none;
+  padding:12px;
+  cursor:pointer;
+  font-size:16px;
+  width:100%;
+  border-radius:6px;
+  transition: background 0.3s ease;
+}
+
+form button:hover {
+  background:#b80000;
+}
+
+/* Hasil simulasi kredit */
+#hasilCicilan {
+  margin-top:15px;
+  font-weight:bold;
+  color:#333;
+  font-size:18px;
+}
+
+/* Footer */
 footer {
   background:#000;
   color:#fff;
   text-align:center;
   padding:15px;
 }
-
-.car-card {
-  display:inline-block;
-  margin:15px;
-  text-align
