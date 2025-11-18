@@ -8,6 +8,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
+  <!-- Header -->
   <header>
     <img src="https://ik.imagekit.io/wamr3naeq/HONDA%20IMORA/Desain%20tanpa%20judul%20-%202025-11-16T143713.209-fotor-bg-remover-20251116143828.png" alt="Logo Honda Imora">
     <nav>
@@ -22,6 +23,16 @@
     </nav>
   </header>
 
+  <!-- Slider Promo -->
+  <div class="slider">
+    <div class="slides">
+      <img src="https://ik.imagekit.io/wamr3naeq/HONDA%20IMORA/orange.png" alt="Promo Brio">
+      <img src="https://ik.imagekit.io/wamr3naeq/HONDA%20IMORA/hr-v.png" alt="Promo HR-V">
+      <img src="https://ik.imagekit.io/wamr3naeq/HONDA%20IMORA/cr-v.png" alt="Promo CR-V">
+    </div>
+  </div>
+
+  <!-- Promo Mobil -->
   <section id="promo">
     <h2>Promo Spesial</h2>
     <p>Dapatkan penawaran terbaik untuk Honda Brio, HR-V, dan CR-V!</p>
@@ -42,6 +53,30 @@
     </div>
   </section>
 
+  <!-- Simulasi Kredit -->
+  <section id="simulasi">
+    <div class="form-wrapper">
+      <h2>Simulasi Kredit</h2>
+      <form id="kreditForm">
+        <label>Harga Mobil (Rp):</label><br>
+        <input type="number" id="harga" required><br>
+        <label>Uang Muka (Rp):</label><br>
+        <input type="number" id="dp" required><br>
+        <label>Tenor (bulan):</label><br>
+        <select id="tenor">
+          <option value="12">12</option>
+          <option value="24">24</option>
+          <option value="36">36</option>
+          <option value="48">48</option>
+          <option value="60">60</option>
+        </select><br><br>
+        <button type="submit">Hitung Cicilan</button>
+        <p id="hasilCicilan"></p>
+      </form>
+    </div>
+  </section>
+
+  <!-- Form Pemesanan -->
   <section id="order">
     <div class="form-wrapper">
       <h2>Pemesanan Mobil</h2>
@@ -61,6 +96,7 @@
     </div>
   </section>
 
+  <!-- Footer -->
   <footer>
     <p>Honda Imora - Showroom Resmi Honda</p>
     <p>Atas Nama: Ardiansyah</p>
@@ -68,10 +104,12 @@
     <p>Telepon: 0811 1925 187</p>
   </footer>
 
+  <!-- WhatsApp Bubble -->
   <a href="https://wa.me/628111925187" class="whatsapp-float" target="_blank">
     <i class="fab fa-whatsapp"></i>
   </a>
 
+  <!-- Script -->
   <script>
     document.getElementById("waForm").addEventListener("submit", function(e){
       e.preventDefault();
@@ -85,6 +123,19 @@
                   "Terima kasih.";
       var url = "https://wa.me/628111925187?text=" + encodeURIComponent(pesan);
       window.open(url, "_blank");
+    });
+
+    document.getElementById("kreditForm").addEventListener("submit", function(e){
+      e.preventDefault();
+      var harga = parseInt(document.getElementById("harga").value);
+      var dp = parseInt(document.getElementById("dp").value);
+      var tenor = parseInt(document.getElementById("tenor").value);
+      var bunga = 0.06;
+      var pinjaman = harga - dp;
+      var totalBunga = pinjaman * bunga * (tenor / 12);
+      var totalBayar = pinjaman + totalBunga;
+      var cicilanBulanan = Math.round(totalBayar / tenor);
+      document.getElementById("hasilCicilan").innerText = "Estimasi Cicilan: Rp " + cicilanBulanan.toLocaleString();
     });
   </script>
 </body>
