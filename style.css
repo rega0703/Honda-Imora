@@ -193,6 +193,23 @@ section h2 {
   font-size: 18px;
 }
 
+/* Tambahkan di bawah sini */
+.detail-btn {
+  display: inline-block;
+  margin-top: 12px;
+  padding: 10px 16px;
+  background: #000;          /* warna hitam elegan */
+  color: #fff;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+
+.detail-btn:hover {
+  background: #333;          /* sedikit lebih terang saat hover */
+}
+
 /* Box elegan untuk form */
 .form-wrapper {
   width: 360px;
