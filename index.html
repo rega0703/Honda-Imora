@@ -59,6 +59,29 @@
     </div>
   </section>
 
+  <!-- Simulasi Kredit
+  <section id="simulasi">
+    <div class="form-wrapper">
+      <h2>Simulasi Kredit</h2>
+      <form id="kreditForm">
+        <label>Harga Mobil (Rp):</label><br>
+        <input type="number" id="harga" required><br>
+        <label>Uang Muka (Rp):</label><br>
+        <input type="number" id="dp" required><br>
+        <label>Tenor (bulan):</label><br>
+        <select id="tenor">
+          <option value="12">12</option>
+          <option value="24">24</option>
+          <option value="36">36</option>
+          <option value="48">48</option>
+          <option value="60">60</option>
+        </select><br><br>
+        <button type="submit">Hitung Cicilan</button>
+        <p id="hasilCicilan"></p>
+      </form>
+    </div>
+  </section> -->
+
   <!-- Form Pemesanan -->
   <section id="order">
     <div class="form-wrapper">
@@ -106,19 +129,6 @@
                   "Terima kasih.";
       var url = "https://wa.me/628111925187?text=" + encodeURIComponent(pesan);
       window.open(url, "_blank");
-    });
-
-    document.getElementById("kreditForm").addEventListener("submit", function(e){
-      e.preventDefault();
-      var harga = parseInt(document.getElementById("harga").value);
-      var dp = parseInt(document.getElementById("dp").value);
-      var tenor = parseInt(document.getElementById("tenor").value);
-      var bunga = 0.06;
-      var pinjaman = harga - dp;
-      var totalBunga = pinjaman * bunga * (tenor / 12);
-      var totalBayar = pinjaman + totalBunga;
-      var cicilanBulanan = Math.round(totalBayar / tenor);
-      document.getElementById("hasilCicilan").innerText = "Estimasi Cicilan: Rp " + cicilanBulanan.toLocaleString();
     });
   </script>
 </body>
