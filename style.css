@@ -102,7 +102,7 @@ nav ul li a:hover {
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
-  color: #55e213;
+  color: #fff;
   z-index: 2;
 }
 
@@ -148,7 +148,7 @@ section h2 {
 .promo-subtitle {
   text-align: center;
   font-size: 18px;
-  color: #555;          /* abu-abu premium */
+  color: #31df14;          /* abu-abu premium */
   margin-bottom: 30px;
   font-style: italic;   /* kesan elegan */
 }
