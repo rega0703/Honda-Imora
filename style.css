@@ -136,10 +136,19 @@ section {
 
 section h2 {
   text-align: center;
-  font-size: 26px;
-  margin-bottom: 20px;
-  color: #000077;
+  color: #000;          /* hitam elegan */
+  font-size: 32px;      /* judul lebih besar */
+  letter-spacing: 1px;  /* jarak antar huruf */
+  margin-bottom: 10px;
   font-weight: bold;
+}
+
+.promo-subtitle {
+  text-align: center;
+  font-size: 18px;
+  color: #555;          /* abu-abu premium */
+  margin-bottom: 30px;
+  font-style: italic;   /* kesan elegan */
 }
 
 /* Promo container */
@@ -189,7 +198,7 @@ section h2 {
 .car-card p {
   margin: 0;
   font-weight: bold;
-  color: #e60000;
+  color: #e60000;       /* harga merah menonjol */
   font-size: 18px;
 }
 
